@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome 内网智能化助手",
+  "version": "1.0.0",
+  "description": "录制并回放网页操作，自动化处理内网任务。",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "alarms",
+    "downloads",
+    "commands",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "commands": {
+    "run_task_1": {
+      "description": "运行快捷任务 1"
+    },
+    "run_task_2": {
+      "description": "运行快捷任务 2"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
